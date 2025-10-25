@@ -11,11 +11,14 @@ cliente e exiba uma mensagem indicando se ele tem ou não direito ao desconto.
 
 idade = int(input('Digite a sua idade: '))
 estudante = input('É estudante? (sim/não): ')
+ingresso = 40
 print(' ')
 
 if idade < 18 or estudante == 'sim' or estudante == 'Sim' or estudante == 's' or estudante == 'S':
     print('Você tem direito ao desconto.')
+    print(f'Total a pagar: R$ {ingresso/2:.2f}')
 elif idade > 18 and estudante == 'não' or estudante == 'Não' or estudante == 'n' or estudante == 'N':
     print('Você não tem direito ao desconto.')
+    print(f'Total a pagar R$ {ingresso:.2f}')
 else:
     print('Dados incorretos. Tente novamente.')
